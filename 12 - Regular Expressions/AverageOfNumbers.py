@@ -1,7 +1,7 @@
 import re
 total = 0
 AmountOfNumbers = 0
-file = open(r'RawTextFiles/mbox.txt')
+file = open(r'TestData/mbox.txt')
 for line in file:
   match = re.findall(r'New Revision: (\d+)', line)
   if len(match) > 0: 
