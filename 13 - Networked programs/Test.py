@@ -1,6 +1,9 @@
 import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
 import socket
 import time
+import ssl
+import re
 
 def HTTP_request_text():
     mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -72,4 +75,51 @@ def urllib_request_binary_better():
     print(size, 'characters copied.')
     fhand.close()
     
-urllib_request_binary_better()
+def urllib_find_URLs():
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+
+    url = input('Enter - ')
+    html = urllib.request.urlopen(url, context=ctx).read()
+    links = re.findall(b'href="(http[s]?://.*?)"', html)
+    for link in links:
+        print(link.decode())
+
+def urllib_find_flawed_URLs():
+    # Ignore SSL certificate errors
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+
+    url = input('Enter - ')
+    html = urllib.request.urlopen(url, context=ctx).read()
+    soup = BeautifulSoup(html, 'html.parser')
+
+    # Retrieve all of the anchor tags
+    tags = soup('a')
+    for tag in tags:
+        print(tag.get('href', None))
+
+urllib_find_flawed_URLs()
+
+def urllib_find_flawed_URL_info():
+    # Ignore SSL certificate errors
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+
+    url = input('Enter - ')
+    html = urllib.request.urlopen(url, context=ctx).read()
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Retrieve all of the anchor tags
+    tags = soup('a')
+    for tag in tags:
+        # Look at the parts of a tag
+        print('TAG:', tag)
+        print('URL:', tag.get('href', None))
+        print('Contents:', tag.contents[0])
+        print('Attrs:', tag.attrs)
+
+urllib_find_flawed_URL_info()
