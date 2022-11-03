@@ -8,8 +8,8 @@ api_key = False
 # https://developers.google.com/maps/documentation/geocoding/intro
 
 api_key = 42
-serviceurl = 'http://py4e-data.dr-chuck.net/comments_42.xml?'
-#serviceurl = input("Enter location: ")
+#serviceurl = 'http://py4e-data.dr-chuck.net/comments_42.xml?'
+serviceurl = input("Enter location: ") + "?"
 print(f"Retrieving http://{serviceurl}")
 
 # Ignore SSL certificate errors

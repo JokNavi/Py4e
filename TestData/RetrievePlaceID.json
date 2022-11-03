@@ -1,0 +1,83 @@
+{
+    "results": [
+        {
+            "address_components": [
+                {
+                    "long_name": "Oxford Road",
+                    "short_name": "Oxford Rd",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "Manchester",
+                    "short_name": "Manchester",
+                    "types": [
+                        "postal_town"
+                    ]
+                },
+                {
+                    "long_name": "Greater Manchester",
+                    "short_name": "Greater Manchester",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "England",
+                    "short_name": "England",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "United Kingdom",
+                    "short_name": "GB",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "M13 9PL",
+                    "short_name": "M13 9PL",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Oxford Rd, Manchester M13 9PL, UK",
+            "geometry": {
+                "location": {
+                    "lat": 53.4668498,
+                    "lng": -2.2338837
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "northeast": {
+                        "lat": 53.47245969999999,
+                        "lng": -2.2262265
+                    },
+                    "southwest": {
+                        "lat": 53.4604806,
+                        "lng": -2.2392034
+                    }
+                }
+            },
+            "partial_match": true,
+            "place_id": "ChIJIaFhiI6xe0gRPPt-xlAzuXw",
+            "plus_code": {
+                "compound_code": "FQ88+PC Manchester, UK",
+                "global_code": "9C5VFQ88+PC"
+            },
+            "types": [
+                "establishment",
+                "point_of_interest",
+                "university"
+            ]
+        }
+    ],
+    "status": "OK"
+}
