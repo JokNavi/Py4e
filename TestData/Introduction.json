@@ -1,0 +1,49 @@
+{
+    "jokNavi": [
+        {
+            "accounts": [
+                {
+                    "long_name": "JokNavi Mora",
+                    "short_name": "JokNavi",
+                    "alt_names": [
+                        "Jok",
+                        "Nav",
+                        "Navi",
+                        "Navski"
+                    ]
+                },
+                {
+                    "long_name": "Navoko Loki",
+                    "short_name": "Navoko",
+                    "alt_names": [
+                        "Nav",
+                        "Navi",
+                        "Navski"
+                    ]
+                }
+            ],
+            "info": [
+                {
+                    "geometry": {
+                        "formatted_address": "Belgium",
+                        "location": {
+                            "lat": 50.5039,
+                            "lng": 4.4699
+                        },
+                        "time_zone": "CET"
+                    },
+                    "current_age": 16,
+                    "gender": "Male",
+                    "height": "Okay, shut up."
+                }
+            ],
+            "interests": [
+                {}
+            ],
+            "personality": [
+                {}
+            ]
+        }
+    ],
+    "status": "OK"
+}
